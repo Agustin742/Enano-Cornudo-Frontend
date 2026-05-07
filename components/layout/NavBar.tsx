@@ -6,6 +6,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState, type FC } from "react";
 import { TbShoppingCartFilled } from "react-icons/tb";
 import Hamburger from "hamburger-react";
+import localFont from "next/font/local";
 
 interface MenuItem {
   readonly name: string;
@@ -19,6 +20,11 @@ const MENU_ITEMS: readonly MenuItem[] = [
   { name: "Minis Personalizadas", href: "minis-personalizadas" },
   { name: "Comunidad", href: "comunidad" }
 ] as const;
+
+const castellar = localFont({
+  src: "../../fonts/castellar.ttf",
+  variable: "--font-castellar",
+});
 
 const NavBar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,19 +48,37 @@ const NavBar: FC = () => {
     <nav
       className="
         flex h-16 w-full items-center justify-between
-        px-6
+        px-6 md:px-8
       "
       aria-label="Main navigation"
     >
-      <Link href="/" aria-label="Ir al inicio">
+      <Link href="/" aria-label="Ir al inicio" className="flex items-center">
         <Image
           src="/logo.png"
           alt="Enano Cornudo Logo"
           width={64}
           height={64}
           priority
+          className="mr-1"
         />
+        <h1 className={`hidden md:block ${castellar.className} text-2xl text-gold`}>
+          EL Enano Cornudo
+        </h1>
       </Link>
+
+      <ul className="hidden md:block">
+        {MENU_ITEMS.map(({ name, href }) => (
+          <li key={href} className="list-none inline-block mr-6 last:mr-0">
+            <button
+              type="button"
+              onClick={() => handleNavigation(href)}
+              className="text-white hover:text-gold"
+            >
+              {name}
+            </button>
+          </li>
+        ))}
+      </ul>
 
       <ul className="flex items-center gap-4">
         <li className="list-none">
