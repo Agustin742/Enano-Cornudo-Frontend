@@ -10,7 +10,7 @@ const bitter = Bitter({
 
 export const metadata: Metadata = {
   title: "Enano Cornudo",
-  description: "Catalgo para el contacto directo con el vendedor",
+  description: "Catálogo para el contacto directo con el vendedor",
 };
 
 export default function RootLayout({
@@ -20,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
     >
-      <body className={`${bitter.className} min-h-full flex flex-col bg-black-charcoal text-white-bone`}>
+      <body className={`${bitter.className} min-h-screen flex flex-col bg-black-charcoal text-white-bone`}>
         <NavBar />
         {children}
       </body>
