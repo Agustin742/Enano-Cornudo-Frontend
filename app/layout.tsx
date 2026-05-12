@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Bitter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/layout/NavBar";
+import { castellar } from "@/fonts/fonts";
 
 const bitter = Bitter({
   subsets: ['latin'],
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html
       lang="es"
+      className={castellar.variable}
+
     >
-      <body className={`${bitter.className} min-h-screen flex flex-col bg-black-charcoal text-white-bone`}>
+      <body className={`${bitter.className} min-h-screen flex flex-col bg-black-charcoal text-white-bone overflow-x-hidden`}>
         <NavBar />
         {children}
       </body>
