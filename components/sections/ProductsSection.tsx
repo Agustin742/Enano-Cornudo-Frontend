@@ -1,10 +1,10 @@
 'use client'
 
-import { useRef, useState, useEffect, useCallback, type FC, type MouseEvent, AnchorHTMLAttributes } from 'react'
+import { useRef, useState, useEffect, useCallback, type FC, type MouseEvent } from 'react'
 import ProductCard from '../ui/cards/ProductCard'
 import styles from './ProductsSection.module.css'
 
-export interface ProductsSectionProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface ProductsSectionProps {
   readonly title: string
   readonly description: string
 }
@@ -101,7 +101,7 @@ const PRODUCTS: readonly Product[] = [
   },
 ] as const
 
-const ProductsSection: FC<ProductsSectionProps> = ({ title, description } : ProductsSectionProps) => {
+const ProductsSection: FC<ProductsSectionProps> = ({ title, description }: ProductsSectionProps) => {
   const carouselRef = useRef<HTMLDivElement>(null)
   const [isDragging, setIsDragging] = useState(false)
   const [startX, setStartX] = useState(0)
@@ -116,9 +116,7 @@ const ProductsSection: FC<ProductsSectionProps> = ({ title, description } : Prod
       setProgress(0)
       return
     }
-    requestAnimationFrame(() => {
-      setProgress((sl / maxScroll) * 100)
-    })
+    setProgress((sl / maxScroll) * 100)
   }, [])
 
   const handleMouseDown = useCallback((e: MouseEvent<HTMLDivElement>) => {
@@ -167,7 +165,7 @@ const ProductsSection: FC<ProductsSectionProps> = ({ title, description } : Prod
           </p>
         </header>
 
-        <nav
+        <div
           ref={carouselRef}
           className={styles.carousel}
           onMouseDown={handleMouseDown}
@@ -188,7 +186,7 @@ const ProductsSection: FC<ProductsSectionProps> = ({ title, description } : Prod
               </li>
             ))}
           </ul>
-        </nav>
+        </div>
 
         <figure className={styles.scrollIndicator} aria-hidden="true">
           <figcaption className="sr-only">Indicador de progreso del carrusel</figcaption>

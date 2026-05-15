@@ -73,14 +73,6 @@
   cursor: grabbing;
 }
 
-.carousel.mobile {
-  cursor: auto;
-}
-
-.carousel.mobile:active {
-  cursor: auto;
-}
-
 .cardItem {
   scroll-snap-align: start;
   flex-shrink: 0;
