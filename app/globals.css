@@ -15,6 +15,10 @@
   --color-cream: #f7eee5;
   --color-gradient-end: #433333;
   --color-scrollbar-track: #b5817f;
+  --color-brown-dark: #221713;
+  --color-brown-medium: #553a30;
+  --color-brown-light: #885c4c;
+  --color-text-light: #d7cfc6;
 }
 
 .gradientBanner {

@@ -1,6 +1,7 @@
 import HeroBanner from "@/components/sections/HeroBanner";
 import FeaturedCategories from "@/components/sections/FeaturedCategories";
 import ProductsSection from "@/components/sections/ProductsSection";
+import PromotionalSection from "@/components/sections/PromotionalSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroBanner />
       <FeaturedCategories />
       <ProductsSection title="Productos Destacados" description="Las mejores Miniaturas para tu ejército" />
+      <PromotionalSection />
     </main>
   );
 }
