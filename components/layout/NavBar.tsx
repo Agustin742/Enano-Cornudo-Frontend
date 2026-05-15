@@ -6,7 +6,6 @@ import { usePathname, useRouter } from "next/navigation";
 import { useState, type FC } from "react";
 import { TbShoppingCartFilled } from "react-icons/tb";
 import Hamburger from "hamburger-react";
-import localFont from "next/font/local";
 
 interface MenuItem {
   readonly name: string;
@@ -20,11 +19,6 @@ const MENU_ITEMS: readonly MenuItem[] = [
   { name: "Minis Personalizadas", href: "minis-personalizadas" },
   { name: "Comunidad", href: "comunidad" }
 ] as const;
-
-const castellar = localFont({
-  src: "../../fonts/castellar.ttf",
-  variable: "--font-castellar",
-});
 
 const NavBar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +55,7 @@ const NavBar: FC = () => {
           priority
           className="mr-1"
         />
-        <h1 className={`hidden md:block ${castellar.className} text-2xl text-gold`}>
+        <h1 className="hidden md:block font-title text-2xl text-gold">
           EL Enano Cornudo
         </h1>
       </Link>

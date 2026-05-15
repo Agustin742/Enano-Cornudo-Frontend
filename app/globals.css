@@ -1,8 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-    --color-black-charcoal: #090909;
-    --color-white-bone: #d7cfc6;
-    --color-gray-red: #272622;
-    --color-gold: #D6A15C;
+  --font-title: var(--font-castellar);
+  --color-black-charcoal: #090909;
+  --color-white-bone: #d7cfc6;
+  --color-gray-red: #272622;
+  --color-gold: #d6a15c;
+  --color-blood-red: #952a2a;
+  --color-white-gray: #f5efe6 ;
+}
+
+
+.gradientBanner {
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(102, 102, 102, 0.2) 98%
+    ),
+    url("/images/hero-banner.png");
+
+  background-position-x: 60%;
+}
+
+@media (min-width: 768px) {
+  .gradientBanner {
+    background-image:
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(102, 102, 102, 0.2) 98%
+      ),
+      url("/images/hero-banner.png");
+
+    background-position-x: center;
+  }
 }
