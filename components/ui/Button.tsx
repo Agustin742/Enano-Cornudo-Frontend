@@ -10,8 +10,8 @@ interface ButtonProps
 }
 
 const BUTTON_VARIANTS = {
-  primary: 'bg-blood-red text-white-gray',
-  secondary: 'border-3 border-gold text-gold',
+  primary: 'bg-blood-red text-white-gray py-2',
+  secondary: 'border-3 border-gold text-gold py-[5.6px]',
 } as const
 
 const Button: FC<ButtonProps> = ({
@@ -31,7 +31,6 @@ const Button: FC<ButtonProps> = ({
         gap-2
         rounded-sm
         px-4
-        py-2
         font-bold
         transition
         duration-300
