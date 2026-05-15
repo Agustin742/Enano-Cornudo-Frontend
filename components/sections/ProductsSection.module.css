@@ -8,6 +8,13 @@
     var(--color-gradient-end) 80%,
     var(--color-gradient-end) 100%
   );
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    margin-bottom: 70px;
+  }
 }
 
 .container {

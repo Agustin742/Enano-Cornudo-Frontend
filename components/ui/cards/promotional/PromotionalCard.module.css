@@ -1,0 +1,151 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 400px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    min-height: 480px;
+    margin-bottom: 70px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  order: 1;
+  width: 100%;
+  background-color: var(--color-brown-dark);
+  padding: 24px 24px 24px 28px;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    width: 33.333333%;
+    order: 1;
+    padding: 32px 32px 32px 28px;
+  }
+}
+
+.header {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin-bottom: 16px;
+    text-align: left;
+  }
+}
+
+.title {
+  font-size: 24px;
+  color: var(--color-gold);
+  font-family: var(--font-subtitle);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 36px;
+    margin-bottom: 16px;
+    max-width: 277px;
+  }
+}
+
+.description {
+  font-size: 16px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .description {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .description {
+    margin-bottom: 16px;
+  }
+}
+
+.actions {
+  order: 2;
+  margin: 0 0;
+}
+
+@media (max-width: 767px) {
+  .actions {
+    margin: 0 auto;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  order: 2;
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .imageWrapper {
+    width: 66.666667%;
+    order: 2;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    var(--color-brown-dark) 0%,
+    var(--color-brown-dark) 4%,
+    transparent 11%,
+    transparent 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .overlay {
+    background: linear-gradient(
+      to right,
+      var(--color-brown-dark) 0%,
+      rgba(85, 58, 48, 0.55) 4%,
+      rgba(136, 92, 76, 0.05) 11%,
+      transparent 100%
+    );
+  }
+}
+
+@media (max-width: 767px) {
+  .overlay {
+    background: linear-gradient(
+      to bottom,
+      var(--color-brown-dark) 2%,
+      rgba(85, 58, 48, 0.55) 4%,
+      rgba(136, 92, 76, 0.05) 18%,
+      transparent 100%
+    );
+  }
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
