@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
+  --font-body: var(--font-bitter);
   --font-title: var(--font-castellar);
+  --font-subtitle: var(--font-anton);
+
   --color-black-charcoal: #090909;
   --color-white-bone: #d7cfc6;
   --color-gray-red: #272622;
   --color-gold: #d6a15c;
   --color-blood-red: #952a2a;
-  --color-white-gray: #f5efe6 ;
+  --color-white-gray: #f5efe6;
 }
-
 
 .gradientBanner {
   background-image:
@@ -29,8 +31,8 @@
     background-image:
       linear-gradient(
         to right,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.8) 50%,
         rgba(102, 102, 102, 0.2) 98%
       ),
       url("/images/hero-banner.png");
