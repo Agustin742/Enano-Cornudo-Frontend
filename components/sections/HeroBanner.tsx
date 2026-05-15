@@ -5,12 +5,14 @@ import { FaFire } from 'react-icons/fa6'
 import { GrCatalog } from 'react-icons/gr'
 
 import Button from '../ui/Button'
+import { useRouter } from 'next/navigation'
 
 interface ActionButton {
   readonly label: string
   readonly variant: 'primary' | 'secondary'
   readonly icon: ReactElement
   readonly ariaLabel: string
+  readonly href: string
 }
 
 const ACTION_BUTTONS: readonly ActionButton[] = [
@@ -19,16 +21,19 @@ const ACTION_BUTTONS: readonly ActionButton[] = [
     variant: 'primary',
     icon: <GrCatalog aria-hidden="true" focusable="false" />,
     ariaLabel: 'Explorar catálogo',
+    href: '/catalogo',
   },
   {
     label: 'Ver Novedades',
     variant: 'secondary',
     icon: <FaFire aria-hidden="true" focusable="false" />,
     ariaLabel: 'Ver novedades',
+    href: '/#novedades',
   },
 ] as const
 
 const HeroBanner: FC = () => {
+  const router = useRouter()
   return (
     <section
       id="inicio"
@@ -79,13 +84,14 @@ const HeroBanner: FC = () => {
         className="z-10"
       >
         <ul className="flex items-center flex-wrap gap-4 md:gap-8">
-          {ACTION_BUTTONS.map(({ label, variant, icon, ariaLabel }) => (
+          {ACTION_BUTTONS.map(({ label, variant, icon, ariaLabel, href }) => (
             <li key={label}>
               <Button
                 label={label}
                 variant={variant}
                 logo={icon}
                 aria-label={ariaLabel}
+                onClick={() => router.push(href)}
               />
             </li>
           ))}
