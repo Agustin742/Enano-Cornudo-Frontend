@@ -36,6 +36,8 @@ const ProductCard: FC<ProductCardProps> = ({
           fill
           sizes="(max-width: 768px) 100vw, 277px"
           className={styles.image}
+          draggable={false}
+          unoptimized
         />
       </div>
 
