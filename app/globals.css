@@ -11,6 +11,10 @@
   --color-gold: #d6a15c;
   --color-blood-red: #952a2a;
   --color-white-gray: #f5efe6;
+  --color-beige-light: #ebe2dc;
+  --color-cream: #f7eee5;
+  --color-gradient-end: #433333;
+  --color-scrollbar-track: #b5817f;
 }
 
 .gradientBanner {
