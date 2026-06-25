@@ -1,7 +1,7 @@
 'use client'
 
 import type { FC } from 'react'
-import PromotionalCard from '../ui/cards/promotional/PromotionalCard'
+import PromotionalCard from '../ui/cards/PromotionalCard'
 
 
 const PromotionalSection: FC = () => {

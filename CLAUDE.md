@@ -1,10 +1,10 @@
 # Agent Guidance
 
 ## Commands
-- `npm run dev` - Start dev server
-- `npm run build` - Production build
-- `npm run lint` - Run ESLint
-- `npx tsc --noEmit` - TypeScript check
+- `pnpm dev` - Start dev server
+- `pnpm build` - Production build
+- `pnpm lint` - Run ESLint
+- `pnpm exec tsc --noEmit` - TypeScript check
 
 ## Tech Stack
 - Next.js 16.2.5 (App Router)
@@ -39,4 +39,4 @@ app/
 - Add `focus-visible` states for keyboard navigation
 
 ## Verification Order
-`npm run lint` -> `npx tsc --noEmit` -> `npm run build`
+`pnpm lint` -> `pnpm exec tsc --noEmit` -> `pnpm build`
