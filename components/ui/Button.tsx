@@ -1,5 +1,3 @@
-'use client'
-
 import type { ButtonHTMLAttributes, FC, ReactNode } from 'react'
 
 interface ButtonProps

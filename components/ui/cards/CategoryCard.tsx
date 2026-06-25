@@ -1,5 +1,3 @@
-'use client'
-
 import type { FC, AnchorHTMLAttributes } from 'react'
 import { FaArrowRight } from 'react-icons/fa6'
 

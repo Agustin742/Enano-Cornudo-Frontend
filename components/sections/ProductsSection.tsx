@@ -6,7 +6,7 @@ import styles from './ProductsSection.module.css'
 
 export interface ProductsSectionProps {
   readonly title: string
-  readonly description: string
+  readonly description?: string
 }
 
 export interface Product {
@@ -160,10 +160,13 @@ const ProductsSection: FC<ProductsSectionProps> = ({ title, description }: Produ
           <h2 id="featured-products-title" className={styles.title}>
             {title}
           </h2>
-          <p className={styles.description}>
-            {description}
-          </p>
-        </header>
+          {description && (
+            <p className={styles.description}>
+              {description}
+            </p>
+          )
+          }        
+          </header>
 
         <div
           ref={carouselRef}

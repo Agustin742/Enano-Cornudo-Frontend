@@ -1,5 +1,3 @@
-'use client'
-
 import type { FC, AnchorHTMLAttributes } from 'react'
 import Image from 'next/image'
 import { FaEye, FaShoppingCart } from 'react-icons/fa'
