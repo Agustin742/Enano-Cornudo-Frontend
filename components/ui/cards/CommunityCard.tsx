@@ -16,13 +16,14 @@ const CommunityCard: FC = () => {
         flex
         flex-col
         items-center
+        m-4 md:m-0
       "
     >
-      <h2 className="text-4xl text-gold text-center">
+      <h2 className="text-2xl md:text-4xl text-gold text-center">
         Únete a nuestra comunidad
       </h2>
 
-      <p className="text-base text-cream text-center my-4">
+      <p className="text-sm md:text-base text-cream text-center my-4">
         Habla y comparte con más personas con tus mismos gustos
       </p>
 
