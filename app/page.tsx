@@ -10,6 +10,7 @@ export default function Home() {
       <FeaturedCategories />
       <ProductsSection title="Productos Destacados" description="Las mejores Miniaturas para tu ejército" />
       <PromotionalSection />
+      <ProductsSection title="Nuevos Productos" />
     </main>
   );
 }
